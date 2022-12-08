@@ -1,4 +1,23 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Jost:wght@400;500;600&display=swap');
 
+/* RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.home-bg {
+  background: linear-gradient(180deg, #000074 0%, rgba(0, 58, 116, 0.9) 100%);
+  background-repeat: no-repeat;
+
+}
+
+.btn-primary {
+  background: linear-gradient(224.06deg, #1687D9 14.4%, #16C8D9 94.95%);
+}
 
 @tailwind base;
 @tailwind components;

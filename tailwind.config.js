@@ -2,7 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      Inter: ["Inter", "sans-serif"],
+      Jost: ["Jost", "sans-serif"],
+    },
+    extend: {
+      screens: {
+        sm: "480px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1200px",
+      },
+    },
   },
   plugins: [],
 };
