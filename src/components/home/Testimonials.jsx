@@ -15,7 +15,7 @@ const Testimonials = () => {
       </p>
       <div className="flex items-center gap-2">
         <div className="lg:w-[75px] lg:h-[75px] w-12 h-12 bg-[#d9d9d9] rounded-full"></div>
-        <p className="lg:text-2xl text-sm text-white font-medium">John Doe</p>
+        <p className="lg:text-2xl text-sm text-white font-medium overflow-y-hidden">John Doe</p>
       </div>
     </section>
   );
