@@ -32,14 +32,27 @@ html::-webkit-scrollbar-thumb {
 }
 
 .btn-primary {
-  background: linear-gradient(224.06deg, #1687D9 14.4%, #16C8D9 94.95%);
+  background: linear-gradient(224.06deg, #1687d9 14.4%, #16c8d9 94.95%);
 }
 
+.btn-secondary {
+  background: linear-gradient(180deg, #1687d9 0%, #1626d9 100%);
+}
+
+.show-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-autofit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* .btn-secondary {
-  @apply  
-} */
+.carousel-container {
+  @apply flex overflow-x-auto mt-8 mb-6 scroll-smooth w-full show-scroll snap-mandatory
+}
+
