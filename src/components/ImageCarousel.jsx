@@ -6,7 +6,7 @@ const ImageCarousel = ({carousel}) => {
       <div className="w-[100px] h-[100px] mx-auto bg-white rounded-full grid place-items-center mb-6">
         <img src={carousel.image} alt="carousel " />
       </div>
-      <p className="text-center text-xl font-semibold text-white">{carousel.desc}</p>
+      <p className="text-center text-xl font-semibold text-white overflow-y-hidden">{carousel.desc}</p>
     </article>
   );
 };

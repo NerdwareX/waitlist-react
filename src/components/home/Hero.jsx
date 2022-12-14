@@ -1,6 +1,7 @@
 import React from "react";
-import heroImg from '../assets/home1.png'
-import CTA from "./CTA";
+import heroImg from '../../assets/home1.png'
+import CTA from "../CTA";
+
 
 const Hero = () => {
   return (

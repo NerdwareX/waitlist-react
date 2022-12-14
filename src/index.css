@@ -43,10 +43,10 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
-.grid-autofit {
+/* .grid-autofit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
-}
+} */
 
 @tailwind base;
 @tailwind components;

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { courseCategories, courses } from "../data";
-import Course from "./Course";
+import { courseCategories, courses } from "../../data";
+import Course from "../Course";
+
 
 const Courses = () => {
   const [selected, setSelected] = useState(0);
@@ -21,7 +22,7 @@ const Courses = () => {
             <i className="ri-arrow-left-line"></i>
           </motion.button>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 ">
             {courseCategories.map((item, index) => {
               return (
                 <small
@@ -50,14 +51,19 @@ const Courses = () => {
           </motion.button>
         </div>
       </div>
-      <div className="mt-[92px] mb-[60px] grid-autofit gap-[15px]">
-        {
-          courses.map((course, idx) => {
-            return (
-              <Course course={course} key={idx} />
-            )
-          })
-        }
+      <div className="mt-[92px] mb-[60px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[15px]">
+        {courses.map((course, idx) => {
+          return <Course course={course} key={idx} />;
+        })}
+      </div>
+
+      <div className="flex items-center justify-center ">
+        <motion.button
+          className="px-[23px] py-2 btn-primary rounded-[20px] text-white"
+          whileTap={{ scale: 0.9 }}
+        >
+          View All
+        </motion.button>
       </div>
     </section>
   );

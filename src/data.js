@@ -17,11 +17,11 @@ export const imageCarousel = [
   },
   {
     image: require("./assets/logo5.png"),
-    desc: "Web",
+    desc: "Python",
   },
   {
     image: require("./assets/logo6.png"),
-    desc: "Python",
+    desc: "Web",
   },
 ];
 

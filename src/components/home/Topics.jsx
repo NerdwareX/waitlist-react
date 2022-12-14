@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
-import { imageCarousel } from "../data";
-import ImageCarousel from "./ImageCarousel";
+import { imageCarousel } from "../../data";
+import ImageCarousel from "../ImageCarousel";
+
 
 
 const Topics = () => {

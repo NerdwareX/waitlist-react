@@ -2,15 +2,15 @@ import React from "react";
 
 const Course = ({course: {image, title, starIcon, rating, desc, authorImg, name, price, clockIcon, bookIcon, groupIcon, time, para, number, rate, heartIcon}}) => {
   return (
-    <article className="h-[441px] border border-[#15add9] rounded-[20px] relative">
+    <article className="h-fit w-full border border-[#15add9] rounded-[20px] relative">
       <button className="absolute left-[13px] top-5 z-10 text-white text-sm px-4 py-1 btn-secondary rounded-[20px]">{rate}</button>
-      <div className="absolute right-[13px] top-5 z-10 w-6 h-6 rounded-full btn-secondary grid place-items-center">
+      <div className="absolute right-[13px] top-5 z-10 w-7 h-7 rounded-full btn-secondary grid place-items-center">
         <i className={heartIcon} style={{color: '#fff'}}></i>
       </div>
-      <div className="w-full overflow-hidden mb-[10px]">
+      <div className="m-1 overflow-hidden mb-[10px]">
         <img src={image} alt="" className="w-full" />
       </div>
-      <div className="px-[13px] ">
+      <div className="px-[13px] pb-3">
         <div className="flex items-center justify-between">
           <small className="text-[#b3b3b3]">{title}</small>
           <div className="flex items-center gap-1">

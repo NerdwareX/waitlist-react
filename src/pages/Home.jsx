@@ -1,8 +1,5 @@
 import React from "react";
-import Courses from "../components/Courses";
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import Topics from "../components/Topics";
+import { About, Courses, Hero, Navbar, Service, Testimonials, Topics } from "../components/home";
 
 const Home = () => {
   return <>
@@ -11,6 +8,9 @@ const Home = () => {
       <Hero />
       <Topics />
       <Courses />
+      <About />
+      <Testimonials />
+      <Service />
     </section>
   </>;
 };
