@@ -64,7 +64,7 @@ export const courses = [
     para: "10 Lessons",
     number: "112,290",
     rate: "Bestseller",
-    heartIcon: "ri-heart-3-line",
+    heartIcon: "ri-heart-3-fill",
   },
   {
     image: require("./assets/img.png"),
@@ -82,7 +82,7 @@ export const courses = [
     para: "10 Lessons",
     number: "112,290",
     rate: "Bestseller",
-    heartIcon: "ri-heart-3-line",
+    heartIcon: "ri-heart-3-fill",
   },
   {
     image: require("./assets/img.png"),
@@ -100,7 +100,7 @@ export const courses = [
     para: "10 Lessons",
     number: "112,290",
     rate: "Bestseller",
-    heartIcon: "ri-heart-3-line",
+    heartIcon: "ri-heart-3-fill",
   },
   {
     image: require("./assets/img.png"),
@@ -118,7 +118,7 @@ export const courses = [
     para: "10 Lessons",
     number: "112,290",
     rate: "Bestseller",
-    heartIcon: "ri-heart-3-line",
+    heartIcon: "ri-heart-3-fill",
   },
   {
     image: require("./assets/img.png"),
@@ -136,7 +136,7 @@ export const courses = [
     para: "10 Lessons",
     number: "112,290",
     rate: "Bestseller",
-    heartIcon: "ri-heart-3-line",
+    heartIcon: "ri-heart-3-fill",
   },
   {
     image: require("./assets/img.png"),
@@ -154,6 +154,6 @@ export const courses = [
     para: "10 Lessons",
     number: "112,290",
     rate: "Bestseller",
-    heartIcon: "ri-heart-3-line",
+    heartIcon: "ri-heart-3-fill",
   },
 ];
