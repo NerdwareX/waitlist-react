@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { imageCarousel } from "../../data";
 import ImageCarousel from "../ImageCarousel";
-
+import AOS from "aos";
 
 
 const Topics = () => {
   const carousel = useRef()
-  
   
   const increment = (snap) => {
     if(carousel.current) {
@@ -16,11 +15,20 @@ const Topics = () => {
       carousel.current.scrollTo(carousel.current.scrollLeft + width * snap, 0)
     }
   }
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+  }, []);
   
   return (
     <>
       {/* desktop */}
-      <section className="2xl:px-[186px] lg:px-20 px-8 mt-24 ">
+      <section
+        className="2xl:px-[186px] lg:px-20 px-8 mt-24 "
+        data-aos="fade-up" data-aos-delay="150"
+      >
         <div className="w-full flex justify-between items-center">
           <h3 className="text-white lg:text-[40px] md:text-3xl text-2xl font-semibold overflow-y-hidden">
             Popular Topics

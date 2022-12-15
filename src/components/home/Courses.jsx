@@ -1,16 +1,26 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { courseCategories, courses } from "../../data";
 import Course from "../Course";
-
+import AOS from "aos";
 
 const Courses = () => {
   const [selected, setSelected] = useState(0);
   const [active, setActive] = useState(false);
 
+    useEffect(() => {
+      AOS.init({
+        duration: 500,
+      });
+    }, []);
+
   return (
     <section className="mt-[93px] 2xl:px-[186px] lg:px-20 px-8">
-      <div className="w-full flex justify-between items-center">
+      <div
+        className="w-full flex justify-between items-center"
+        data-aos="fade-right"
+        data-aos-delay="150"
+      >
         <h3 className="text-white lg:text-[40px] md:text-3xl text-2xl font-semibold overflow-y-hidden">
           Exclusive courses
         </h3>
@@ -51,7 +61,11 @@ const Courses = () => {
           </motion.button>
         </div>
       </div>
-      <div className="mt-[92px] mb-[60px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[15px]">
+      <div
+        className="mt-[92px] mb-[60px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[15px]"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         {courses.map((course, idx) => {
           return <Course course={course} key={idx} />;
         })}

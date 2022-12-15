@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import heroImg from '../../assets/home1.png'
 import CTA from "../CTA";
@@ -8,7 +9,11 @@ const Hero = () => {
     <section className="w-full lg:h-[700px]  pt-40 flex items-center 2xl:px-[186px] lg:px-20 px-8">
       <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-2 overflow-y-hidden">
         {/* left */}
-        <div className="flex flex-col gap-5 text-center items-center lg:items-start lg:text-left">
+        <motion.div
+          className="flex flex-col gap-5 text-center items-center lg:items-start lg:text-left"
+          animate={{ x: [0, 40, 0], opacity: [0, 1] }}
+          transition={{ type: "spring", delay: 1 }}
+        >
           <div className="flex flex-col gap-6 ">
             <h2 className="text-white xl:text-5xl lg:text-3xl text-2xl font-semibold overflow-y-hidden">
               A New Way to Learn
@@ -22,11 +27,15 @@ const Hero = () => {
             anywhere, anytime, anyplace.
           </p>
           <CTA />
-        </div>
+        </motion.div>
         {/* right */}
-        <div className="md:flex lg:justify-end w-[50%] h-auto lg:w-full mx-auto hidden">
-          <img src={heroImg} alt=""  />
-        </div>
+        <motion.div
+          className="md:flex lg:justify-end w-[50%] h-auto lg:w-full mx-auto hidden"
+          animate={{ y: [0, 40, 0], opacity: [0, 1] }}
+          transition={{ type: "spring", delay: 0.5 }}
+        >
+          <img src={heroImg} alt="" />
+        </motion.div>
       </div>
     </section>
   );
