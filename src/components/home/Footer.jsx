@@ -5,7 +5,7 @@ import Logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <section className="mt-20 pb-8">
+    <section className="mt-20 pb-8 overflow-x-hidden">
       <div className="2xl:px-[186px] lg:px-20 px-8 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-[85px]">
         {/* col1 */}
         <div className="flex flex-col gap-7">

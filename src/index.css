@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 html {
@@ -43,7 +43,6 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,4 +50,5 @@ html::-webkit-scrollbar-thumb {
 .carousel-container {
   @apply flex overflow-x-auto mt-8 mb-6 scroll-smooth w-full show-scroll snap-mandatory
 }
+
 

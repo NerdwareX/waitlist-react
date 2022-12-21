@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { courseCategories, courses } from "../../data";
 import Course from "../Course";
 
 const Courses = () => {
   const [selected, setSelected] = useState(0);
   const [active, setActive] = useState(false);
+  const [width, setWidth] = useState(0)
+
+  const carousel = useRef();
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+  }, []);
 
   return (
     <section className="mt-[93px] 2xl:px-[186px] lg:px-20 px-8">
@@ -53,9 +60,14 @@ const Courses = () => {
             <i className="ri-arrow-right-line"></i>
           </motion.button>
         </div>
+        <button className="text-white text-xs sm:text-sm md:text-base font-medium lg:hidden tracking-wider">
+          See More
+        </button>
       </div>
+
+      {/* desktop */}
       <div
-        className="mt-[92px] mb-[60px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[15px]"
+        className="mt-[92px] mb-[60px] hidden lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[15px]"
         data-aos="fade-up"
         data-aos-delay="300"
       >
@@ -64,7 +76,26 @@ const Courses = () => {
         })}
       </div>
 
-      <div className="flex items-center justify-center ">
+      {/* mobile */}
+      <motion.div
+        className="my-5 cursor-grab overflow-hidden lg:hidden"
+        ref={carousel}
+        whileTap={{ cursor: "grabbing" }}
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <motion.div
+          className="flex gap-[15px]"
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
+        >
+          {courses.map((course, index) => {
+            return <Course course={course} key={index} />;
+          })}
+        </motion.div>
+      </motion.div>
+
+      <div className="lg:flex items-center justify-center hidden">
         <motion.button
           className="px-[23px] py-2 btn-primary rounded-[20px] text-white"
           whileTap={{ scale: 0.9 }}

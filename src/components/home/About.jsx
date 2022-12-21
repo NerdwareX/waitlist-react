@@ -12,8 +12,8 @@ const About = () => {
   }, []);
 
   return (
-    <section className="w-full lg:h-[700px] flex items-center 2xl:px-[186px] lg:px-20 px-8 mt-[41px] mb-[50px]">
-      <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-2 overflow-y-hidden">
+    <section className="w-full lg:h-[700px] flex items-center 2xl:px-[186px] lg:px-20 px-8 mt-[41px] mb-[50px] ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-2 overflow-hidden">
         {/* left */}
         <div
           className="flex flex-col gap-7 text-center items-center lg:items-start lg:text-left"

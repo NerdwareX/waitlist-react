@@ -6,8 +6,8 @@ import CTA from "../CTA";
 
 const Hero = () => {
   return (
-    <section className="w-full lg:h-[700px]  pt-40 flex items-center 2xl:px-[186px] lg:px-20 px-8">
-      <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-2 overflow-y-hidden">
+    <section className="w-full lg:h-[700px]  pt-40 flex items-center 2xl:px-[186px] lg:px-20 px-8 ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-2 overflow-hidden ">
         {/* left */}
         <motion.div
           className="flex flex-col gap-5 text-center items-center lg:items-start lg:text-left"
