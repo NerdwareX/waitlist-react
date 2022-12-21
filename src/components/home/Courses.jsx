@@ -1,18 +1,11 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { courseCategories, courses } from "../../data";
 import Course from "../Course";
-import AOS from "aos";
 
 const Courses = () => {
   const [selected, setSelected] = useState(0);
   const [active, setActive] = useState(false);
-
-    useEffect(() => {
-      AOS.init({
-        duration: 500,
-      });
-    }, []);
 
   return (
     <section className="mt-[93px] 2xl:px-[186px] lg:px-20 px-8">

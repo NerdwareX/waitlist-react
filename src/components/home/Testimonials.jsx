@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import quoteIcon from '../../assets/quote-icon.svg'
-import AOS from "aos";
+
 
 const Testimonials = () => {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 500,
-    });
-  }, []);
 
   return (
     <section

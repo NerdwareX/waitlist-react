@@ -1,15 +1,9 @@
 import { motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
 import ServiceImg from '../../assets/home3.png'
-import AOS from "aos";
+
 
 const Service = () => {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 500,
-    });
-  }, []);
 
   return (
     <section className="w-full lg:h-[400px] flex items-center 2xl:px-[186px] lg:px-20 px-8 mt-12 mb-16">
