@@ -144,7 +144,9 @@ const Navbar = () => {
               <i className="ri-shopping-cart-line"></i>
             </li>
             <motion.li className="flex md:hidden" whileTap={{ scale: 0.9 }}>
-              <button className="px-[23px] py-2 btn-primary rounded-[20px] text-white">
+              <button className="px-[23px] py-2 btn-primary rounded-[20px] text-white"
+               onClick={window['Connect']}
+               id={'connect'}>
                 Connect wallet
               </button>
             </motion.li>
