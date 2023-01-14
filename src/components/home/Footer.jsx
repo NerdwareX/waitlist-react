@@ -38,7 +38,7 @@ const Footer = () => {
               </motion.div>
               {/*Telegram*/}
               <motion.div
-                className="text-3xl cursor-pointer w-[29px] h-[29px] bg-white grid place-items-center rounded-full"
+                className="text-3xl cursor-pointer w-[35px] h-[35px] bg-white grid place-items-center rounded-full"
                 whileHover={{ scale: 0.9 }}
               >
                 <i className="ri-telegram-fill text-[#042e71]"></i>
