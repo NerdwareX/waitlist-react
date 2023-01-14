@@ -45,7 +45,7 @@ const CTA = () => {
           src={LearnVideo}
           autoPlay
           muted
-          controls
+          loop
           className="h-screen w-screen object-cover"
         ></video>
       </Modal>
