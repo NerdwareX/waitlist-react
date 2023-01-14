@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import logo from "../../assets/logo.png";
 import { motion } from "framer-motion";
 
@@ -80,7 +81,7 @@ const Navbar = () => {
           </ul>
 
           <motion.button
-            className="px-[23px] py-2 btn-primary rounded-[20px] text-white hidden sm:flex"
+            className="px-[23px] py-2 btn-primary rounded-[20px] text-white block"
             whileTap={{ scale: 0.9 }}
           >
             Connect wallet
@@ -141,11 +142,6 @@ const Navbar = () => {
             <li className="text-[#15add9] text-lg">
               <i className="ri-shopping-cart-line"></i>
             </li>
-            <motion.li className="flex md:hidden" whileTap={{ scale: 0.9 }}>
-              <button className="px-[23px] py-2 btn-primary rounded-[20px] text-white">
-                Connect wallet
-              </button>
-            </motion.li>
           </ul>
         </div>
         <motion.div

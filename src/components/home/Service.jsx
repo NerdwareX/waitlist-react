@@ -1,16 +1,14 @@
-import { motion } from "framer-motion";
 import React from "react";
-import ServiceImg from '../../assets/home3.png'
-
+import ServiceImg from "../../assets/home3.png";
+import { motion } from "framer-motion";
 
 const Service = () => {
-
   return (
     <section className="w-full lg:h-[400px] flex items-center 2xl:px-[186px] lg:px-20 px-8 mt-12 mb-16">
-      <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-2 overflow-hidden">
+      <div className="grid lg:grid-cols-2 grid-cols-1 md:items-center w-full h-full gap-10 lg:gap-2 overflow-hidden">
         {/* left */}
         <div
-          className="md:flex lg:justify-start w-[50%] h-auto lg:w-full mx-auto hidden"
+          className="md:flex lg:justify-start w-[50%] h-auto lg:w-full mx-auto"
           data-aos="fade-right"
           data-aos-delay="150"
         >
