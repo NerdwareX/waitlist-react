@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
+import LearnVideo from "../assets/learn-more.mp4";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
 import playIcon from "../assets/play-icon.svg";
 
 const CTA = () => {
   const [showModal, setShowModal] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (!showModal) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+  }, [showModal]);
+
   return (
     <>
       <div className="flex md:flex-row md:items-center md:gap-10 flex-col gap-6">
@@ -29,10 +40,14 @@ const CTA = () => {
       </div>
 
       <Modal open={showModal} handleClose={() => setShowModal(false)}>
-        <div className="bg-white p-5 h-56 text-black rounded-md">
-          {/* Todo: Add learn more video */}
-          Learn more video to be placed here
-        </div>
+        <video
+          ref={videoRef}
+          src={LearnVideo}
+          autoPlay
+          muted
+          loop
+          className="h-screen w-screen object-cover"
+        ></video>
       </Modal>
     </>
   );
