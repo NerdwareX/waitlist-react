@@ -25,8 +25,8 @@
   // this is for connection with metamask
 async function Connect() {
   if (!window.ethereum) {
-    alert("please install metamask");
-    console.log("please install metamask");
+    alert("Connect to a Web3 wallet");
+    console.log("Connect to a Web3 wallet");
   } else {
     accounts = await window.ethereum.request({
       method: "eth_requestAccounts",
