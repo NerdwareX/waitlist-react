@@ -18,6 +18,13 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <p className="text-lg">Follow us</p>
             <div className="flex items-center gap-3 ">
+               {/*Discord*/}
+               <motion.div
+                className="text-3xl cursor-pointer w-[58px] h-[58px] bg-white grid place-items-center rounded-full"
+                whileHover={{ scale: 0.9 }}
+              >
+                <i className="ri-discord-fill text-[#042e71]"></i>
+              </motion.div>
               <motion.div
                 className="text-3xl cursor-pointer w-[58px] h-[58px] bg-white grid place-items-center rounded-full"
                 whileHover={{ scale: 0.9 }}
@@ -28,7 +35,7 @@ const Footer = () => {
                 className="text-3xl cursor-pointer w-[58px] h-[58px] bg-white grid place-items-center rounded-full"
                 whileHover={{ scale: 0.9 }}
               >
-                <i className="ri-facebook-circle-fill text-[#042e71]"></i>
+                <i className="ri-linkedin-fill text-[#042e71]"></i>
               </motion.div>
               <motion.div
                 className="text-3xl cursor-pointer w-[58px] h-[58px] bg-white grid place-items-center rounded-full"
@@ -38,7 +45,7 @@ const Footer = () => {
               </motion.div>
               {/*Telegram*/}
               <motion.div
-                className="text-3xl cursor-pointer w-[35px] h-[35px] bg-white grid place-items-center rounded-full"
+                className="text-3xl cursor-pointer w-[58px] h-[58px] bg-white grid place-items-center rounded-full"
                 whileHover={{ scale: 0.9 }}
               >
                 <i className="ri-telegram-fill text-[#042e71]"></i>

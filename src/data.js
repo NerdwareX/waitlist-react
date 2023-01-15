@@ -1,18 +1,18 @@
 export const imageCarousel = [
   {
-    image: require("./assets/logo1.png"),
+    image: require("./assets/logo2.png"),
     desc: "Data science",
   },
   {
-    image: require("./assets/logo2.png"),
+    image: require("./assets/logo1.png"),
     desc: "Design",
   },
   {
-    image: require("./assets/logo3.png"),
+    image: require("./assets/logo4.png"),
     desc: "Photography",
   },
   {
-    image: require("./assets/logo4.png"),
+    image: require("./assets/logo3.png"),
     desc: "Crypto",
   },
   {
