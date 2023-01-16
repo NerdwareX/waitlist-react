@@ -1,34 +1,46 @@
+import { Button, JoinWaitlistForm, LearnMoreVideo } from "./home";
 import React, { useEffect, useRef, useState } from "react";
 
-import LearnVideo from "../assets/learn-more.mp4";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
 import playIcon from "../assets/play-icon.svg";
 
 const CTA = () => {
   const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState("");
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (!showModal) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
+    if (videoRef.current) {
+      if (!showModal) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
     }
   }, [showModal]);
 
   return (
     <>
       <div className="flex md:flex-row md:items-center md:gap-10 flex-col gap-6">
-        <motion.button
-          className="px-[23px] py-2 btn-primary rounded-[20px] text-white text-lg tracking-wider"
-          whileTap={{ scale: 0.9 }}
+        <Button
+          onClick={() => {
+            setShowModal(true);
+            setModalContent(
+              <div className="min-h-screen w-full grid place-content-center">
+                <JoinWaitlistForm />
+              </div>
+            );
+          }}
         >
           Join Waitlist
-        </motion.button>
+        </Button>
         <div
           className="flex items-center gap-2 cursor-pointer"
-          onClick={() => setShowModal(true)}
+          onClick={() => {
+            setShowModal(true);
+            setModalContent(<LearnMoreVideo videoRef={videoRef} />);
+          }}
         >
           <motion.img
             src={playIcon}
@@ -40,14 +52,7 @@ const CTA = () => {
       </div>
 
       <Modal open={showModal} handleClose={() => setShowModal(false)}>
-        <video
-          ref={videoRef}
-          src={LearnVideo}
-          autoPlay
-          muted
-          loop
-          className="h-screen w-screen object-cover"
-        ></video>
+        {modalContent}
       </Modal>
     </>
   );

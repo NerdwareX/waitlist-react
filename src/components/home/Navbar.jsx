@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import logo from "../../assets/logo.png";
+import { LogoLink } from "../home";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -24,12 +24,7 @@ const Navbar = () => {
             <i className="ri-menu-fill"></i>
           </motion.div>
 
-          <div className="flex items-center sm:gap-1 gap-0">
-            <img src={logo} alt="company logo" />
-            <h1 className="font-Inter text-white text-base sm:text-2xl font-semibold">
-              NERDWAREX
-            </h1>
-          </div>
+          <LogoLink />
           {/* right */}
           <ul className="xl:flex items-center gap-4 hidden">
             <li
